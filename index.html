@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="player">
+<div class="record" id="record">
+<div class="label" id="label"></div>
+</div>
+<section class="info">
+<h1 id="title">Song title</h1>
+<p id="artist">Artist</p>
+</section>
+<div class="progress">
+<span id="current">0:00</span>
+<input type="range" id="progress" min="0" max="100" step="0.1" value="0" aria-label="Seek">
+<span id="duration">0:00</span>
+</div>
+<div class="controls">
+<button id="prev" aria-label="Previous song">&#9198;</button>
+<button id="play" class="main" aria-label="Play">&#9654;</button>
+<button id="next" aria-label="Next song">&#9197;</button>
+</div>
+<div class="volume">
+<span aria-hidden="true">&#128265;</span>
+<input type="range" id="volume" min="0" max="1" step="0.01" value="0.7" aria-label="Volume">
+</div>
+<ul class="playlist" id="playlist"></ul>
+<audio id="audio" preload="metadata"></audio>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
